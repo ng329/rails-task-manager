@@ -3,5 +3,9 @@
 <p><%= @task.details %></p>
 
 <%# <%= check_box_tag 'role_ids[]', role.id -%>
-
+<% if @task.completed %>
+  <p>This task is completed</p>
+<% else  %>
+  <p>This task is not completed</p>
+<% end %>
 <%= link_to "back to all tasks", tasks_path %>
