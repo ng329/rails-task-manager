@@ -13,3 +13,51 @@
  *= require_tree .
  *= require_self
  */
+ body {
+  color: black;
+  text-align: center;
+ }
+
+ a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+ }
+
+
+ .title {
+  padding: 20px;
+  margin: 20px;
+  color: black;
+  border-bottom: 2px solid rgb(67, 65, 65);
+ }
+
+ button {
+  background-color: rgba(118, 116, 116, 0.5);
+  padding: 15px;
+  margin: 20px;
+  text-align: center;
+ }
+
+ .form-group {
+  padding: 20px;
+  margin: 20px;
+ }
+
+ .description {
+  padding: 15px;
+  border: 1px solid rgb(173, 168, 168);
+  background-color: azure;
+ }
+
+ .completed-box {
+  padding: 15px;
+ }
+
+ .complete {
+  margin: 10px;
+  padding: 5px;
+ }

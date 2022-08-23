@@ -1,19 +1,54 @@
+<div class="container title">
+  <h2><%= @task.title %></h2>
+</div>
 
-<h2><%= @task.title %></h2>
-<p><%= @task.details %></p>
+<div class="container description">
+  <p><%= @task.details %></p>
+</div>
 
 <%# <%= check_box_tag 'role_ids[]', role.id -%>
-<% if @task.completed %>
-  <p>This task is completed</p>
-<% else  %>
-  <p>This task is not completed</p>
-<% end %>
+<div class="completed-box">
+  <% if @task.completed %>
+    <div class="complete d-flex flex-row justify-content-space-between">
+        <div class="complete">
+          <%= check_box_tag :task, 1, @task.completed %>
+        </div>
+        <div class="complete">
+          <p>This task is completed</p>
+        </div>
+    </div>
+  <% else  %>
+     <div class="complete d-flex flex-row justify-content-space-between">
+        <div class="complete">
+          <%= check_box_tag :task, 1, @task.completed %>
+        </div>
+        <div class="complete">
+          <p>This task is not completed</p>
+        </div>
+    </div>
+  <% end %>
+</div>
 
-<%= link_to "edit task", edit_task_path %>
+<div class="container buttons-flex d-flex justify-content-center">
+  <div class="container button-delete">
+    <button class="btn btn-secondary">
+      <%= link_to "edit task", edit_task_path %>
+    </button>
+  </div>
 
-<%= link_to "Delete",
-  task_path(@task),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%>
+  <div class="container button-delete">
+    <button class="btn btn-secondary">
+      <%= link_to "Delete",
+        task_path(@task),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+      %>
+    </button>
+  </div>
 
-<%= link_to "back to all tasks", tasks_path %>
+  <div class="container button-index">
+    <button class="btn btn-secondary">
+      <%= link_to "back to all tasks", tasks_path %>
+    </button>
+  </div>
+
+</div>

@@ -1,13 +1,13 @@
-<h2>Edit Task</h2>
+<div class="container title">
+  <h2>Edit Task</h2>
+</div>
 
-<%= form_with model: @task do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.check_box :completed %>
-  <%= f.label :completed %>
-  <%= f.submit %>
-<% end %>
+<div class="container form">
+  <%= render "form", restaurant: @task %>
+</div>
 
-<%= link_to "Back to list", tasks_path %>
+<div class="container button-index">
+  <button class="btn btn-secondary">
+    <%= link_to "back to all tasks", tasks_path %>
+  </button>
+</div>
