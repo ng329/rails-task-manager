@@ -9,4 +9,4 @@ Application used as a task/to-do list.
 * Setup to run on local server
 
 ### Created for:
-Created as a part of Le Wagon web developmeny bootcamp. 
+Created as a part of Le Wagon web development bootcamp. 
